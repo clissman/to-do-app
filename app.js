@@ -63,6 +63,8 @@ function onReady() {
     renderUI();
 }
 
-
 window.onload = () => onReady();
+<<<<<<< HEAD
 
+=======
+>>>>>>> Remove obsolete comments
