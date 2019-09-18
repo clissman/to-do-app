@@ -22,43 +22,30 @@ function onReady() {
         TODOS.forEach(todo => {
             const NEW_LI = document.createElement('li');
             const CHECKBOX = document.createElement('input')
+            const LABEL = document.createElement('label');
+            const TEXTFIELD = document.querySelector('.mdl-js-textfield')
+            
             CHECKBOX.type = 'checkbox';
-
+            CHECKBOX.classList.add('mdl-checkbox__input');
             NEW_LI.textContent = todo.title;
+            NEW_LI.classList.add('mdl-list__item')
+            LABEL.classList.add('mdl-checkbox', 'mdl-js-checkbox', 'mdl-js-ripple-effect');
+            TEXTFIELD.classList.remove('is-dirty')
 
-            TODO_LIST.appendChild(NEW_LI);
             NEW_LI.appendChild(CHECKBOX);
+            NEW_LI.appendChild(LABEL);
+            LABEL.appendChild(CHECKBOX)
+            TODO_LIST.appendChild(NEW_LI);
         });
-
     }
 
     ADD_TODO_FORM.addEventListener('submit', e => {
         e.preventDefault();
-        createNewTodo();
+        createNewTodo(); 
     })
-
     renderUI();
 }
 
 
 window.onload = () => onReady();
 
- // const addToDoForm = document.getElementById('addToDoForm');
-    // const newToDoText = document.getElementById('newToDoText');
-    // const toDoList = document.getElementById('toDoList');
-
-
-    // addToDoForm.addEventListener('submit', e => {
-    //     e.preventDefault();
-
-    //     let title = newToDoText.value;
-    //     let newLi = document.createElement('li');
-    //     let checkbox = document.createElement('input');
-
-    //     checkbox.type = 'checkbox';
-
-    //     newLi.textContent = title
-    //     newLi.appendChild(checkbox)
-    //     toDoList.appendChild(newLi);
-    //     newToDoText.value = '';
-    // })
