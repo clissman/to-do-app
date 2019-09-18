@@ -58,10 +58,10 @@ function onReady() {
                 renderUI();
             })
 
-            TODO_LIST.appendChild(NEW_LI);
-            NEW_LI.appendChild(DELETE_BTN);
             LABEL.appendChild(CHECKBOX)
             NEW_LI.appendChild(LABEL);
+            NEW_LI.appendChild(DELETE_BTN);
+            TODO_LIST.appendChild(NEW_LI);
             updateLocalStorage();        
         });
     }   
