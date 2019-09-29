@@ -62,6 +62,7 @@ function onReady() {
             NEW_LI.appendChild(LABEL);
             NEW_LI.appendChild(DELETE_BTN);
             TODO_LIST.appendChild(NEW_LI);
+            componentHandler.upgradeDom();
             updateLocalStorage();        
         });
     }   
